@@ -6,6 +6,6 @@ public class Test {
 	}
 	
 	private static void foo() {
-		System.out.println("Hey.....Good practice buddy.......");
+		System.out.println("Hey.....Good practice buddy....");
 	}
 }
