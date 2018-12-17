@@ -15,6 +15,7 @@ public class BalancedParenthesis {
 		} else {
 			System.out.println("No, parenthesis are not balanced in the given input");
 		}
+		System.out.println("Test commit");
 	}
 
 	private static boolean areParenthesisBalanced(char[] exp) {
