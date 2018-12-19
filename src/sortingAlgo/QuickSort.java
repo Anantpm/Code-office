@@ -1,3 +1,4 @@
+package sortingAlgo;
 import java.util.Arrays;
 /*
  * Quick sort implementation for int array
