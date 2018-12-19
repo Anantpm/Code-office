@@ -1,8 +1,10 @@
-package sortingAlgo;
-import java.util.Arrays;
 /*
  * Quick sort implementation for int array
+ *
  */
+package sortingAlgo;
+
+import java.util.Arrays;
 
 public class QuickSort {
 	public static void main(String[] args) {
