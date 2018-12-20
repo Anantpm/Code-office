@@ -9,8 +9,9 @@ import java.util.Arrays;
 public class QuickSort {
 	public static void main(String[] args) {
 		int[] a = { 8, 6, 4, 7, 2, 1 };
+		System.out.println("Input array : " + Arrays.toString(a));
 		quickSort(a, 0, a.length - 1);
-		System.out.println(Arrays.toString(a));
+		System.out.println("Sorted array : " + Arrays.toString(a));
 	}
 
 	private static void quickSort(int[] a, int low, int high)// 0 and 5
