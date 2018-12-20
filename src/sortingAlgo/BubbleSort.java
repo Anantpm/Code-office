@@ -15,12 +15,17 @@ public class BubbleSort {
 
 	private static void bubbleSort(int[] a) {
 		int n = a.length - 1;
+		boolean swapped;
 		for (int i = 0; i < n; i++) {
+			swapped = false;
 			for (int j = 0; j < n - i; j++) {
 				if (a[j] > a[j + 1]) {
 					swap(a, j, j + 1);
+					swapped = true;
 				}
 			}
+			if (!swapped)
+				break;
 		}
 	}
 
