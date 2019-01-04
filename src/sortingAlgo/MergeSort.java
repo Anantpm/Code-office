@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class MergeSort {
 
 	public static void main(String[] args) {
-		int[] a = { 12, 11, 13, 5, 6, 7 };
+		int[] a = {1,2,3,1,4,5}; //{ 12, 11, 13, 5, 6, 7 };
 		System.out.println("Input array : " + Arrays.toString(a));
 		mergeSort(a, 0, a.length-1);
 		System.out.println("Sorted array : " + Arrays.toString(a));
@@ -36,7 +36,7 @@ public class MergeSort {
 		int k = low;
 
 		while (i < L.length && j < R.length) {
-			if (L[i] < R[j]) {
+			if (L[i] <= R[j]) {
 				a[k] = L[i];
 				i++;
 			}
