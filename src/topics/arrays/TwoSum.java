@@ -9,14 +9,36 @@ package topics.arrays;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.IntStream;
 
 public class TwoSum {
 
 	public static void main(String[] args) {
-		int[] a = { 2, 7, 11, 15, 9, 4 };
-		int target = 11;
+		int[] a = { 2, 7, 11, 15 };
+		int target = 9;
 		getPair(a, target);
+		getPair8(a, target);
+	}
 
+	/*
+	 * implementation using java 8 stream api.
+	 * 
+	 */
+	private static void getPair8(int[] a, int target) {
+		int[] arr = new int[2];
+		Map<Integer, Integer> map = new HashMap<>();
+		IntStream.range(0, a.length).forEach(i -> {
+			if (map.containsKey(target - a[i])) {
+				{
+					arr[0] = map.get(target - a[i]);
+					arr[1] = i;
+				}
+			} else {
+				map.put(a[i], i);
+			}
+		});
+		Arrays.stream(arr).forEach(System.out::println);
 	}
 
 	private static void getPair(int[] a, int target) {

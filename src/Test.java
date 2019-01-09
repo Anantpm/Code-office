@@ -11,7 +11,7 @@ public class Test {
 		System.out.println(Arrays.stream(arr).max().getAsInt());
 
 		Arrays.stream(arr).filter(e -> e % 5 == 0).forEach(System.out::print);
-		Arrays.stream(arr).forEach(System.out::println); 
+		Arrays.stream(arr).forEach(System.out::println);
 	}
 
 	private static void foo() {
