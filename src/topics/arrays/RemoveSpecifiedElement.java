@@ -1,10 +1,17 @@
 package topics.arrays;
 
-/**
- * @author manjulkar_a
- * Problem : Remove multiple occurrences of element from the array.
- */
+import java.util.Arrays;
 
+/**
+ * @author : Anant Manjulkar
+ *
+ * Problem : Remove multiple occurrences of element from the array.
+ *	
+ * input : {3,2,3,2} and number to be removed : 3
+ *
+ * output : 2
+ *
+ */
 public class RemoveSpecifiedElement {
 
 	public static void main(String[] args) {
