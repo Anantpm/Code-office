@@ -35,7 +35,7 @@ public class NextPermutation {
 			int k = a.length - 1;
 			while (a[k] <= a[i - 1])
 				k--;
-			swap(a, (i - 1), k--);
+			swap(a, (i - 1), k);
 		}
 		int j = a.length - 1;
 		while (i < j) {
