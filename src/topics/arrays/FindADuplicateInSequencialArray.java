@@ -8,7 +8,7 @@ import java.util.Arrays;
  * Problem : One number out of all continuous numbers is
  *         duplicated within the array find the number.
  */
-public class FindDuplicate {
+public class FindADuplicateInSequencialArray {
 
 	public static void main(String[] args) {
 		int[] a = { 1, 2, 2, 3 };
