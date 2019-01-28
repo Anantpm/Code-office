@@ -1,10 +1,6 @@
 package topics.arrays;
 
-import java.lang.reflect.AnnotatedArrayType;
 import java.util.Arrays;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Consumer;
-import java.util.function.IntConsumer;
 import java.util.stream.IntStream;
 
 /**
