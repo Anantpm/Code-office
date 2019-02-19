@@ -22,7 +22,7 @@ public class LargestRectangleInhistogram {
 	}
 
 	private static int getMaxRectangularArea(int[] a) {
-		int area = 0;
+		int maxArea = 0;
 		Stack<Integer> stack = new Stack<>();
 		int areaTop;
 		int tp;
@@ -31,22 +31,20 @@ public class LargestRectangleInhistogram {
 			if (stack.empty() || a[stack.peek()] <= a[i])
 				stack.push(i++);
 			else {
-				tp = stack.peek();
-				stack.pop();
+				tp = stack.pop();
 				areaTop = a[tp] * (stack.empty() ? i : i - stack.peek() - 1);
-				if (area <= areaTop) {
-					area = areaTop;
+				if (maxArea <= areaTop) {
+					maxArea = areaTop;
 				}
 			}
 		}
 		while (!stack.empty()) {
-			tp = stack.peek();
-			stack.pop();
+			tp = stack.pop();
 			areaTop = a[tp] * (stack.empty() ? i : i - stack.peek() - 1);
-			if (area <= areaTop) {
-				area = areaTop;
+			if (maxArea <= areaTop) {
+				maxArea = areaTop;
 			}
 		}
-		return area;
+		return maxArea;
 	}
 }
