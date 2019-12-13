@@ -13,7 +13,7 @@ package topics.arrays;
 public class MinInRotatedArray {
 
 	public static void main(String[] args) {
-		int[] a = { 3, 4, 5, 1, 2 };
+		int[] a = { 4, 5, 6, 7, 0, 1, 2 };
 		int min = findMinInRArray(a);
 		System.out.println("Minimum in the Rotated Array : " + min);
 	}
@@ -26,7 +26,7 @@ public class MinInRotatedArray {
 		int start = 0;
 		int end = a.length - 1;
 		while (start < end) {
-			int mid = (start + end);
+			int mid = (start + end) / 2;
 			if (a[mid] > 0 && a[mid] < a[mid - 1])
 				return a[mid];
 			if (a[mid] >= a[start] && a[mid] > a[end])
