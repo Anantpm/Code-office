@@ -1,9 +1,10 @@
 package topics.arrays;
 
 /**
- * @author Anant Manjulkar Problem : A sorted array is rotated at some unknown
- *         point, find the minimum element in it. Assume no duplicates elements
- *         in the array.
+ * @author Anant Manjulkar
+ * 
+ *         Problem : A sorted array is rotated at some unknown point, find the
+ *         minimum element in it. Assume no duplicates elements in the array.
  * 
  *         Input : [ 5, 6, 1, 2, 3, 4]
  *
