@@ -1,5 +1,7 @@
 package topics.arrays;
 
+import java.util.Arrays;
+
 /**
  * @author : Anant Manjulkar
  *
@@ -44,7 +46,55 @@ package topics.arrays;
 public class GameOfLife {
 	
 	public static void main(String[] args) {
+		int[][] a = {  
+	            { 0, 1, 0}, 
+	            { 0, 0, 1}, 
+	            { 1, 1, 1},
+	            { 0, 0, 0}
+	        }; 
 		
+		int[][] genNext = getNextGen(a);
+		for(int i=0;i<genNext.length;i++)
+			System.out.println(Arrays.toString(genNext[i]));
+	}
+
+	private static int[][] getNextGen(int[][] a) {
+		int M = a.length;
+		int N = a[0].length;
+		int[][] nextGen = new int[M][N];
+
+		for (int x = 0; x < M ; x++) {
+			for (int y = 0; y < N ; y++) {
+				int lives = getLives(a, x, y);
+
+				lives -= a[x][y];
+
+				if (a[x][y] == 1 && (lives < 2 || lives > 3))
+					nextGen[x][y] = 0;
+				else if (a[x][y] == 1 && (lives == 2 || lives == 3))
+					nextGen[x][y] = 1;
+				else if (a[x][y] == 0 && lives == 3)
+					nextGen[x][y] = 1;
+				else
+					nextGen[x][y] = 0;
+			}
+		}
+
+		return nextGen;
+
+	}
+
+	private static int getLives(int[][] a, int x, int y) {
+		int lives = 0;
+		for (int i = -1; i <= 1; i++) {
+			for (int j = -1; j <= 1; j++) {
+				int l = x + i;
+				int m = y + j;
+				if ((l >= 0 && l < a.length) && (m >= 0 && m < a[0].length))
+					lives += a[l][m];
+			}
+		}
+		return lives;
 	}
 
 }
